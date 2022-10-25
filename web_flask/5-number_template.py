@@ -2,8 +2,14 @@
 """
 starts a Flask web application
 """
+<<<<<<< HEAD
+from flask import Flask, render_template
+
+
+=======
 
 from flask import Flask, render_template
+>>>>>>> 9ee7170cd4aadc7d91f36c20bfd5a1fbcebd07f8
 app = Flask(__name__)
 
 
@@ -43,5 +49,9 @@ def numbersandtemplates(n):
     """display a HTML page only if n is an integer"""
     return render_template('5-number.html', n=n)
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 9ee7170cd4aadc7d91f36c20bfd5a1fbcebd07f8
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port='5000')

@@ -85,12 +85,20 @@ class TestBaseModel(unittest.TestCase):
         tic = datetime.now()
         inst1 = BaseModel()
         toc = datetime.now()
+<<<<<<< HEAD
+        self.assertTrue(inst1.created_at - tic < toc - tic)
+=======
         self.assertTrue(tic <= inst1.created_at <= toc)
+>>>>>>> 9ee7170cd4aadc7d91f36c20bfd5a1fbcebd07f8
         time.sleep(1e-4)
         tic = datetime.now()
         inst2 = BaseModel()
         toc = datetime.now()
+<<<<<<< HEAD
+        self.assertTrue(inst2.created_at - tic < toc - tic)
+=======
         self.assertTrue(tic <= inst2.created_at <= toc)
+>>>>>>> 9ee7170cd4aadc7d91f36c20bfd5a1fbcebd07f8
         self.assertEqual(inst1.created_at, inst1.updated_at)
         self.assertEqual(inst2.created_at, inst2.updated_at)
         self.assertNotEqual(inst1.created_at, inst2.created_at)

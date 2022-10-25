@@ -46,10 +46,17 @@ class HBNBCommand(cmd.Cmd):
                 else:
                     try:
                         value = int(value)
+<<<<<<< HEAD
+                    except Exception:
+                        try:
+                            value = float(value)
+                        except Exception:
+=======
                     except:
                         try:
                             value = float(value)
                         except:
+>>>>>>> 9ee7170cd4aadc7d91f36c20bfd5a1fbcebd07f8
                             continue
                 new_dict[key] = value
         return new_dict
@@ -140,12 +147,20 @@ class HBNBCommand(cmd.Cmd):
                                 if args[2] in integers:
                                     try:
                                         args[3] = int(args[3])
+<<<<<<< HEAD
+                                    except Exception:
+=======
                                     except:
+>>>>>>> 9ee7170cd4aadc7d91f36c20bfd5a1fbcebd07f8
                                         args[3] = 0
                                 elif args[2] in floats:
                                     try:
                                         args[3] = float(args[3])
+<<<<<<< HEAD
+                                    except Exception:
+=======
                                     except:
+>>>>>>> 9ee7170cd4aadc7d91f36c20bfd5a1fbcebd07f8
                                         args[3] = 0.0
                             setattr(models.storage.all()[k], args[2], args[3])
                             models.storage.all()[k].save()
@@ -160,5 +175,9 @@ class HBNBCommand(cmd.Cmd):
         else:
             print("** class doesn't exist **")
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 9ee7170cd4aadc7d91f36c20bfd5a1fbcebd07f8
 if __name__ == '__main__':
     HBNBCommand().cmdloop()

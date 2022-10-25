@@ -14,7 +14,15 @@ class State(BaseModel, Base):
     if models.storage_t == "db":
         __tablename__ = 'states'
         name = Column(String(128), nullable=False)
+<<<<<<< HEAD
+        cities = relationship(
+            "City",
+            cascade='all, delete, delete-orphan',
+            backref="state"
+        )
+=======
         cities = relationship("City", backref="state")
+>>>>>>> 9ee7170cd4aadc7d91f36c20bfd5a1fbcebd07f8
     else:
         name = ""
 

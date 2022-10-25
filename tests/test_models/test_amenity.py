@@ -79,12 +79,19 @@ class TestAmenity(unittest.TestCase):
     def test_to_dict_creates_dict(self):
         """test to_dict method creates a dictionary with proper attrs"""
         am = Amenity()
+<<<<<<< HEAD
+=======
         print(am.__dict__)
+>>>>>>> 9ee7170cd4aadc7d91f36c20bfd5a1fbcebd07f8
         new_d = am.to_dict()
         self.assertEqual(type(new_d), dict)
         self.assertFalse("_sa_instance_state" in new_d)
         for attr in am.__dict__:
+<<<<<<< HEAD
+            if attr != "_sa_instance_state":
+=======
             if attr is not "_sa_instance_state":
+>>>>>>> 9ee7170cd4aadc7d91f36c20bfd5a1fbcebd07f8
                 self.assertTrue(attr in new_d)
         self.assertTrue("__class__" in new_d)
 

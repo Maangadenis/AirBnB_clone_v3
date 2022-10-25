@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+#!/usr/bin/python3
+=======
 #!/usr/bin/python
+>>>>>>> 9ee7170cd4aadc7d91f36c20bfd5a1fbcebd07f8
 """ holds class Review"""
 import models
 from models.base_model import BaseModel, Base
